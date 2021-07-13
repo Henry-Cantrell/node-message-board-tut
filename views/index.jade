@@ -3,10 +3,14 @@ var router = require('router')
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #{title}!
   p Here are some messages for your enjoyment, friend:
 
-  ul each val in router.messages:
-	li = val
-
+  
+    each val in messages
+      h2 Author
+      h2= val.user
+      p= val.text
+      p= val.added
+      
   
