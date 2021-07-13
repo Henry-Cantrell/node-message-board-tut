@@ -1,5 +1,12 @@
 extends layout
+var router = require('router')
 
 block content
   h1= title
   p Welcome to #{title}
+  p Here are some messages for your enjoyment, friend:
+
+  ul each val in router.messages:
+	li = val
+
+  
